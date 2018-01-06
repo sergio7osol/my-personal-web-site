@@ -1,0 +1,32 @@
+{
+  "name": "web-node-server-webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn run build:dev:client",
+    "build:dev:client": "node_modules/.bin/webpack -d --watch",
+    "build:prod:client": "node_modules/.bin/webpack -p --progress --colors",
+    "nodemon-server": "nodemon server.js"
+  },
+  "author": "OSV",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "file-loader": "^1.1.6",
+    "hbs": "^4.0.1",
+    "html-webpack-plugin": "^2.30.1",
+    "image-webpack-loader": "^3.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  }
+}

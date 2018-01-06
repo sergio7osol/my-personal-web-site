@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "yarn run build:dev:client",
+    "start": "yarn run node-server",
     "build:dev:client": "node_modules/.bin/webpack -d --watch",
     "build:prod:client": "node_modules/.bin/webpack -p --progress --colors",
-    "nodemon-server": "nodemon server.js"
+    "node-server": "node server.js"
   },
   "author": "OSV",
   "license": "MIT",

@@ -39,11 +39,10 @@ app.get("/", (req, res) => {
         pageMainTitle: "Welcome to my personal web-site!"
     });
 });
-
-app.get("/portfolio", (req, res) => {
-    res.render('portfolio.hbs', {
-        pageTitle: "Portfolio Page",
-        pageMainTitle: "My works"
+app.get("/projects", (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: "Portfolio page",
+        pageMainTitle: "The collections of my works."
     });
 });
 app.get("/bad", (req, res) => {

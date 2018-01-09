@@ -6,7 +6,7 @@
     "start": "yarn run node-server",
     "build:dev:client": "node_modules/.bin/webpack -d --watch",
     "build:prod:client": "node_modules/.bin/webpack -p --progress --colors",
-    "node-server": "node server.js"
+    "node-server": "nodemon server.js"
   },
   "author": "OSV",
   "license": "MIT",

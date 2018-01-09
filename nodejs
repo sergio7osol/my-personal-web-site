@@ -1,0 +1,30 @@
+COMMANDS:
+node inspect path/to/file.js
+nodemon --inspect-brk path/to/file.js
+nodemon server.js -e js,hbs
+nodemon --exec 'yarn test'   => reload server by any changes - run the command
+
+
+SSH:
+ls -al ~/.ssh   -> looking for existing ssh keys
+ssh-keygen -t rsa -b 4096 -C 'sergey8osokin@gmail.com'   -> generate ssh keys (init values are enough)
+eval "$(ssh-agent -s)"   -> starting ssg agent
+ssh-add ~/.ssh/id_rsa ->   telling the ssg agent where our file with ssg key lives (the local machine 
+                            now knows about this ssh key pair)
+ssh -T git@github.com   -> test connection and make sure that our ssh keys are properly set up                            
+then copy/paste commands from the github page for creating/pushing your repo.
+
+HEROKU:
+install toolbelt.heroku.com
+> heroku login   -> enter email&password (from inside the project you want to deploy)
+> heroku keys:add    -> get our ssh key on heroku
+> heroku keys:remove -> remove our ssh key from heroku
+> ssh -v git@heroku.com   -> test our connection (if you see: "Authentication succeded (public key)" - all gone well!)
+change in server.js port with port variable - const port = process.env.PORT || 3000;
+set in package.json: "scripts"->"start": "node server.js"
+commit changes
+push to github (git push)
+> heroku create   -> creating a new app on heroku; adding a new remote to our git repo. After that - 
+                     we have 2 remotes - origin remote (github) and a heroku remote.   
+> git push heroku  -> deploy that process    
+> heroku open   -> or grab the url for the deployed app on heroku and paste it into the browser address line.                

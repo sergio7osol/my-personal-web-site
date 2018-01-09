@@ -13,14 +13,21 @@ console.log("isProduction:", isProduction);
 let DIST_DIR = path.resolve(__dirname, "public");
 let SRC_DIR = path.resolve(__dirname, "src");
 
-const extractHbs = new HtmlWebpackPlugin({
+const extractHomeHbs = new HtmlWebpackPlugin({
     template: './home.hbs', // to get the template from - src/...
     filename: '../views/home.hbs', // the file to put the generated HTML into - public/...
     inject: 'body',
     hash:  false
-})
+});
+const extractProjectsHbs = new HtmlWebpackPlugin({
+    template: './projects.hbs', // to get the template from - src/...
+    filename: '../views/projects.hbs', // the file to put the generated HTML into - public/...
+    inject: 'body',
+    hash:  false
+});
+
 const extractScss = new ExtractTextPlugin({
-    filename: "css/[name].[hash].css"
+    filename: "css/[name].css"
  });
 
 console.log("src: ", SRC_DIR + "/js/index.js");
@@ -30,7 +37,7 @@ const config = {
     output: {
         path: DIST_DIR, // directory to initially output files into
         publicPath: "/",
-        filename: "js/bundle.[hash]js"
+        filename: "js/bundle.js"
     },
     context: SRC_DIR,
     module: {
@@ -86,7 +93,8 @@ const config = {
         ]
     },
     plugins: [
-        extractHbs,
+        extractHomeHbs,
+        extractProjectsHbs,
         extractScss
     ]
 }

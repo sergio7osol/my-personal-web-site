@@ -12,3 +12,13 @@
         }
     }
 }
+
+.nav-link {
+    &.active {
+        cursor: default;
+    }
+    &.disabled {
+        cursor: default;
+    }
+
+}

@@ -1,19 +1,18 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html>
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{pageTitle}}</title>
     {{> cdn_link_bootstrap}}
-  <link href="/css/main.css" rel="stylesheet"></head>
-  <body>
+</head>
+<body>
     <div class="container container--main">
         <ul class="nav nav--default nav-pills flex-column flex-sm-row justify-content-center">
           <li class="nav-item">
-            <a class="flex-sm-fill nav-link active" href="#">Home</a>
+            <a class="flex-sm-fill nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="flex-sm-fill nav-link" href="/projects">Portfolio</a>
+            <a class="flex-sm-fill nav-link active" href="#">Portfolio</a>
           </li>
           <li class="nav-item">
             <a class="flex-sm-fill nav-link disabled" href="#">About</a>
@@ -24,8 +23,12 @@
         </ul>
         <div class="content content--main">
           {{> bl_H1}}
+          <p>About. Some paragraph text here...</p>
         </div>
         {{> footer}}
+        <script>
+          document.body.style.backgroundImage = "url('/img/mechanical-bg.jpg')";
+        </script>
     </div>
-  <script type="text/javascript" src="/js/bundle.js"></script></body>
+</body>
 </html>

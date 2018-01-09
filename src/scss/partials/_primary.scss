@@ -1,3 +1,11 @@
+body {
+    // background-image: url('../img/red-sea.jpg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: transparent;
+    background-size: cover;
+}
+
 .container--main {
     display: flex;
     min-height: 100vh;

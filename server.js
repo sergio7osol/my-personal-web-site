@@ -36,13 +36,15 @@ hbs.registerHelper('screamIt', (text) => {
 app.get("/", (req, res) => {
     res.render('home.hbs', {
         pageTitle: "My personal web-site",
-        pageMainTitle: "Welcome to my personal web-site!"
+        pageMainTitle: "Welcome to my personal web-site!",
+        activeMenuItem: "home"
     });
 });
 app.get("/projects", (req, res) => {
     res.render('projects.hbs', {
         pageTitle: "Portfolio page",
-        pageMainTitle: "The collections of my works."
+        pageMainTitle: "The collections of my works.",
+        activeMenuItem: "projects"
     });
 });
 app.get("/bad", (req, res) => {

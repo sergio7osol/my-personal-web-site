@@ -3,16 +3,32 @@
 <head>
     <meta charset="utf-8">
     <title>{{pageTitle}}</title>
-</head>
+    {{> cdn_link_bootstrap}}
+<link href="/css/main.css" rel="stylesheet"></head>
 <body>
     <div class="container container--main">
-        {{> nav}}
+        <ul class="nav nav--default nav-pills flex-column flex-sm-row justify-content-center">
+          <li class="nav-item">
+            <a class="flex-sm-fill nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="flex-sm-fill nav-link active" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="flex-sm-fill nav-link disabled" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="flex-sm-fill nav-link" href="/contacts">Contacts</a>
+          </li>
+        </ul>
         <div class="content content--main">
           {{> bl_H1}}
           <p>About. Some paragraph text here...</p>
         </div>
         {{> footer}}
+        <script>
+          document.body.style.backgroundImage = "url('/img/mechanical-bg.jpg')";
+        </script>
     </div>
-    {{> cdn_scripts_bootstrap}}
-</body>
+<script type="text/javascript" src="/js/bundle.js"></script></body>
 </html>

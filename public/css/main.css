@@ -1,3 +1,9 @@
+body {
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: transparent;
+  background-size: cover; }
+
 .container--main {
   display: flex;
   min-height: 100vh;
@@ -26,3 +32,9 @@
   @media (min-width: 1200px) {
     .nav--default {
       margin-top: 2.4rem; } }
+
+.nav-link.active {
+  cursor: default; }
+
+.nav-link.disabled {
+  cursor: default; }
